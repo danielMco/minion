@@ -17,7 +17,7 @@ Maven
 
 HOW TO RUN:
 
-1. Clone the minion from git
+1. Clone the minion from https://github.com/danielMco/minion.git
 2. inside the directory run:
 mvn clean install
 mvn spring-boot:run -Dspring-boot.run.arguments=--server.port=8081
