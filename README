@@ -1,0 +1,28 @@
+== Minion Service ==
+The Minion Service is responsible for processing tasks assigned by the Master.
+
+Key Components:
+Task Execution: Processes a range of passwords to find the one that matches a given hash.
+Async Processing: Tasks are handled asynchronously for efficient execution.
+Result Reporting: Sends the result of the task back to the Master.
+
+Key Endpoints:
+POST /minion/receiveTask: Receives a task from the Master.
+POST /minion/sendResult: Sends the result of a task to the Master.
+
+Running the Services Locally
+Prerequisites
+Java 17+
+Maven
+
+HOW TO RUN:
+
+1. Clone the minion from git
+2. inside the directory run:
+mvn clean install
+mvn spring-boot:run -Dspring-boot.run.arguments=--server.port=8081
+3. use another terminal, inside into minion directory and run:
+mvn spring-boot:run -Dspring-boot.run.arguments=--server.port=8082
+
+4. 2 minions server started and ready on port 8081 & 8082
+
